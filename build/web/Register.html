@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<link rel="stylesheet" href="css/Register.css">
+</head>
+<body>
+	<form action="Register.jsp" method="post">
+	<div class="container">
+		<div class="registerbox">
+			<h2>Register New Customer</h2>
+			<input type="text" name="fname" placeholder="Enter First Name" required pattern="^[A-Za-z]+">
+			<input type="text" name="lname" placeholder="Enter Last Name" required pattern="^[A-Za-z]+">
+                        <input type="text" name="email" placeholder="Enter Email ID" required>
+                               
+			<input type="text"  name="phno" placeholder="Enter Phone Number"
+                               onkeypress="return event.charCode>= 48 && event.charCode<= 57" required
+                               pattern="^[6-9]{1}[0-9]{9}" title="plz enter valid phone">
+			<input type="text" name="address" placeholder="Enter Address" required>
+			<input type="text" name="uid" placeholder="Enter Customer ID" required
+                               pattern="^[A-Za-z]{1,}[0-9]{0,}" title="plz create username combi of digit and char and should be greater than 6">
+		
+                        <input type="password" name="pass1" placeholder="Enter Password" required
+                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="plz create strong pass">
+			<input type="password" name="pass2" placeholder="Retype Password" required>
+			<input type="submit" value="Submit" >
+		</div>
+		</div>
+	</form>
+</body>
+</html>
